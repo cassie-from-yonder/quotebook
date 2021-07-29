@@ -15,7 +15,6 @@ Contributions welcome. Keywords are 'Transcendental, Irreverence, sensuality, mo
 - [ ] 'Smithsonian Backswatter'
 - [ ] Botanical Rose
 - [ ] Ugly cute Frog 'tying a cherry stem'.
-- [ ]
 
 ## Possible inspirations
 
