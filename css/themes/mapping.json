@@ -1,0 +1,10 @@
+
+themes: [
+  {
+    name: 'Botanical Leaves',
+    top-left: 'leaves-animation.svg',
+  },
+  {
+    name: 'Smithsonian Backswatter'
+  }
+]

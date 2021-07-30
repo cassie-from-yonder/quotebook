@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://taniarascia.github.io/primitive/css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/themes/botanic_leaves.css" rel="stylesheet" type="text/css">
+    <!-- <link href="css/themes/smithsonian-backswatter.css" rel="stylesheet" type="text/css"> -->
+    <link rel="icon" href="https://clojurescript.org/images/cljs-logo-icon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="preamble">
+      <h1 class="title">404 Quotebook</h1>
+    </div>
+    <div class="viewport">
+      <embed  class="top-left" id='top-left'>
+      <div class="epigraph">
+        <blockquote>
+          <p class="quote" id="quote">
+          </p>
+        </blockquote>
+        <p class="citation">
+        </p>
+      </div>
+    </div>
+    <div class="controls flex-row">
+      <div class="flex-small text-center">
+        <label>
+          Pick theme
+        </label>
+        <select>
+           <option selected value="option-1">Botanic Leaves</option>
+           <option value="option-2">Option 2</option>
+        </select>
+      </div>
+    </div>
+    <script src="js/compiled/quotebook.js" type="text/javascript"></script>
+  </body>
+</html>
+
+<script>
+  const database_url = 'https://quotebook-dd68d-#default-rtdb.asia-southeast1.firebasedatabase.app/'.replace('#','');
+  let theme = 'Botanical Leaves';
+
+
+  function renderQuote() {
+    fetch(database_url + 'N.json')
+      .then(res => res.json())
+      .then(N => {
+        const rint = Math.floor(Math.random()*N);
+        fetch(database_url + '/quotes/' + rint + '.json')
+          .then(res => res.json())
+          .then(res => {
+            const text = res.text;
+            const citation = res.citation;
+            const date = res.date;
+
+            const quoteP = document.getElementById('quote');
+            quoteP.innerHTML = text;
+
+            const top_left_embed = document.getElementById('top-left');
+            top_left_embed.setAttribute('src','css/themes/leaves-animation.svg');
+
+
+          });
+      });
+  }
+
+  function init() {
+    renderQuote();
+  }
+
+  init();
+</script>

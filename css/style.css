@@ -1,0 +1,79 @@
+/* some style */
+
+body {
+    font-family: "Gotham","Libre Franklin", "Helvetica Neue", arial, sans-serif;
+    margin: 4rem;
+    margin-left: 12rem;
+    margin-right: 12rem;
+}
+
+.title {
+    text-align: center;
+}
+
+.viewport {
+    position: relative;
+
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 25rem;
+
+    font-size: 1.5rem;
+
+    border-radius: 28px;
+}
+
+.epigraph {
+    margin: 1.25em 4rem 2em;
+    padding: .5em 2.5em .375em;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+blockquote {
+    border-left: none;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+blockquote::before, blockquote::after {
+    display: block;
+    position: absolute;
+    font-size: 2.5em;
+}
+
+blockquote::before {
+    content: "\201C";
+    top: -.2em;
+    left: .045em;
+}
+
+blockquote::after {
+    content: "\201D";
+    bottom: -0.4em;
+    right: 2em;
+}
+
+.quote {
+    font-style: italic;
+}
+
+.citation {
+    position: absolute;
+    bottom: 0;
+}
+
+
+select {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+
+}
