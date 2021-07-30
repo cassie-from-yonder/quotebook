@@ -1,10 +1,31 @@
 # quotebook
 
-FIXME: Write a one-line description of your library/project.
+Quotebook for M21404
 
 ## Overview
 
-FIXME: Write a paragraph about the library/project and highlight its goals.
+Contributions welcome. Keywords are 'Transcendental, Irreverence, sensuality, mono no aware, topless males'
+
+## To-do
+
+- [ ] Switch from firebase to possibly git CI 
+- [ ] Implement quote scraping in Shirator
+- [ ] Finish theme css loading framework to make it easier to create themes
+- [ ] Add Quil/Processing animations
+- [ ] Blissful sound bites
+
+## Theme Ideas
+
+- [ ] 'Smithsonian Backswatter'
+- [ ] Botanical Rose
+- [ ] Ugly cute Frog 'tying a cherry stem'.
+To get an interactive development environment run:
+
+## Possible inspirations
+
+https://www.youtube.com/watch?v=V7PTQ-vLP_w
+
+http://stoney.sb.org/eno/oblique.html
 
 ## Setup
 
