@@ -19,3 +19,5 @@ Contributions welcome. Keywords are 'Transcendental, Irreverence, sensuality, mo
 ## Possible inspirations
 
 https://www.youtube.com/watch?v=V7PTQ-vLP_w
+
+http://stoney.sb.org/eno/oblique.html
