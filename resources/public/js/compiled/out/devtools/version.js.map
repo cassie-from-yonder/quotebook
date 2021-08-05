@@ -1,0 +1,1 @@
+{"version":3,"file":"\/home\/spongiforma\/documents\/lispcode\/clojure\/quotebook\/resources\/public\/js\/compiled\/out\/devtools\/version.js","sources":["version.cljs?rel=1628173101182"],"lineCount":9,"mappings":";AAAA;;AAGA,AAAKA,mCAAgB;AAErB,uCAAA,vCAAMC;AAAN,AACED","names":["devtools.version\/current-version","devtools.version\/get-current-version"]}

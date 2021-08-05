@@ -2,9 +2,11 @@
 themes: [
   {
     name: 'Botanical Leaves',
+    file: 'botanic_leaves',
     top-left: 'leaves-animation.svg',
   },
   {
-    name: 'Smithsonian Backswatter'
+    name: 'Smithsonian Backswatter',
+    file: 'botanic_leaves',
   }
 ]

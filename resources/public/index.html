@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://taniarascia.github.io/primitive/css/main.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="css/themes/botanic_leaves.css" rel="stylesheet" type="text/css">
-    <!-- <link href="css/themes/smithsonian-backswatter.css" rel="stylesheet" type="text/css"> -->
     <link rel="icon" href="https://clojurescript.org/images/cljs-logo-icon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +12,7 @@
 
   </head>
   <body>
+    <link href="css/themes/botanic-leaves.css" rel="stylesheet" type="text/css" id='theme-style'>
     <div class="preamble">
       <h1 class="title">404 Quotebook</h1>
     </div>
@@ -33,9 +32,9 @@
         <label>
           Pick theme
         </label>
-        <select>
-           <option selected value="option-1">Botanic Leaves</option>
-           <option value="option-2">Option 2</option>
+        <select id='theme-select'>
+           <option selected value="Botanic Leaves">Botanic Leaves</option>
+           <option value="Smithsonian Backswatter">Smithsonian Backswatter</option>
         </select>
       </div>
     </div>
@@ -53,7 +52,7 @@
       .then(res => res.json())
       .then(N => {
         const rint = Math.floor(Math.random()*N);
-        fetch(database_url + '/quotes/' + rint + '.json')
+        fetch(database_url + 'quotes/' + rint + '.json')
           .then(res => res.json())
           .then(res => {
             const text = res.text;
