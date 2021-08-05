@@ -15,7 +15,7 @@ Contributions welcome. Keywords are 'Transcendental, Irreverence, sensuality, mo
 
 ## Theme Ideas
 
-- [x] 'Smithsonian Backswatter'
+- [ ] 'Smithsonian Backswatter'
 - [ ] Botanical Rose
 - [ ] Ugly cute Frog 'tying a cherry stem'.
 To get an interactive development environment run:
