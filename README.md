@@ -9,14 +9,14 @@ Contributions welcome. Keywords are 'Transcendental, Irreverence, sensuality, mo
 ## To-do
 
 - [ ] Switch from firebase to possibly git CI 
-- [ ] Implement quote scraping in Shirator
-- [ ] Finish theme css loading framework to make it easier to create themes
+- [x] Implement quote scraping in Shirator
+- [x] Finish theme css loading framework to make it easier to create themes
 - [ ] Add Quil/Processing animations
 - [ ] Blissful sound bites
 
 ## Theme Ideas
 
-- [ ] 'Smithsonian Backswatter'
+- [x] 'Smithsonian Backswatter'
 - [ ] Botanical Rose
 - [ ] Ugly cute Frog 'tying a cherry stem'.
 To get an interactive development environment run:
