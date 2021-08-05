@@ -8,7 +8,6 @@ Contributions welcome. Keywords are 'Transcendental, Irreverence, sensuality, mo
 
 ## To-do
 
-- [ ] Switch from firebase to possibly git CI 
 - [x] Implement quote scraping in Shirator
 - [x] Finish theme css loading framework to make it easier to create themes
 - [ ] Add Quil/Processing animations
