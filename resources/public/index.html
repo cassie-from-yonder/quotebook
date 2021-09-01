@@ -92,7 +92,7 @@
             const text = res.text;
             const citation = toTitleCase(
                 strip(
-                    citation.toLowerCase().replaceAll("also ", "")
+                    res.citation.toLowerCase().replaceAll("also ", "")
                             .split(" ").slice(0, 2).join(),
                     ","
                 ).replaceAll("prannaya", "prannay").replaceAll(".", "").trim()
