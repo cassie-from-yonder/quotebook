@@ -77,3 +77,34 @@ select {
     width: 20%;
 
 }
+
+.options {
+    display: flex;
+    margin-top: 4rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+.option-box {
+    height: 4rem;
+    width: 24rem;
+    border-radius: 1rem;
+    line-height: 4rem;
+
+    margin: 1rem;
+}
+.option-text {
+    padding-left: 2rem;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.col {
+    flex: 1;
+}
+
+.modal {
+    display: none;
+}
