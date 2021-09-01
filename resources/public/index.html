@@ -90,7 +90,16 @@
           .then(res => res.json())
           .then(async res => {
             const text = res.text;
-            const citation = capitalizeFirstLetter(res.citation.replace(",","").replace(".","").trim());
+            const citation = toTitleCase(
+                strip(
+                    citation.toLowerCase().replaceAll("also ", "")
+                            .split(" ").slice(0, 2).join(),
+                    ","
+                ).replaceAll("prannaya", "prannay").replaceAll(".", "").trim()
+                .replaceAll("i-shiang", "bobby").replace("i-shang", "bobby").replace(",", " ").trim()
+            )
+
+            // const citation = capitalizeFirstLetter(res.citation.replace(",","").replace(".","").trim());
             const date = res.date;
 
             const quoteP = document.getElementById('quote');
@@ -146,6 +155,17 @@
   }
   function capitalizeFirstLetter(string) {
     return string[0].toUpperCase() + string.slice(1);
+  }
+
+  function toTitleCase(str) {
+    return str.replace(
+      /\w\S*/g,
+      (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+    );
+  }
+
+  function strip(str, substr) {
+    return str.replace(new RegExp(`^${substr}`), "").replace(new RegExp(`${substr}$`), "")
   }
 
   Array.prototype.shuffle = function() {
