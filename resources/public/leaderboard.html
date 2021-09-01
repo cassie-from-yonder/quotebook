@@ -20,19 +20,8 @@
             <th>Score</th>
         </tr>
         </thead>
-        <tbody>
-        <tr>
-            <td>Description 1</td>
-            <td>Description 2</td>
-        </tr>
-        <tr>
-            <td>Description 1</td>
-            <td>Description 2</td>
-        </tr>
-        <tr>
-            <td>Description 1</td>
-            <td>Description 2</td>
-        </tr>
+        <tbody id="leaderboard-table">
+
         </tbody>
     </table>
 <script src="js/compiled/quotebook.js" type="text/javascript"></script>
@@ -50,6 +39,38 @@
 </style>
 
 <script>
+	const database_url = 'https://quotebook-dd68d-#default-rtdb.asia-southeast1.firebasedatabase.app/'.replace('#','');
 
+	async function renderLeaderboard() {
+	    fetch(database_url + 'star/scores.json')
+          .then(res => res.json())
+          .then(async res => {
+            const data = [];
+            for (const property in res) {
+            	data.push({
+                  name: res[property].name,
+                  points: res[property].points
+                });
+            }
+            data.sort((u,v) => v.points - u.points);
+            const tbody = document.getElementById('leaderboard-table');
+            tbody.innerHTML = '';
+            data.forEach(entry => {
+	            const row = tbody.insertRow();
+	            const cell0 = row.insertCell(0);
+	            const cell1 = row.insertCell(1);
+	            cell0.innerText = entry.name;
+	            cell1.innerHTML = entry.points * 100 + "";
+            })
+          })
+    }
+    function init() {
+		renderLeaderboard();
+		setInterval(() => {
+			renderLeaderboard();
+        },8000);
+    }
+
+    init();
 </script>
 
