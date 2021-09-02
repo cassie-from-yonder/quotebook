@@ -109,7 +109,7 @@
             top_left_embed.setAttribute('src','css/themes/leaves-animation.svg');
 
             if (names === null) {
-              names = await getNames()
+              names = (await getNames()).filter(it => it !== null).map(fixCitation)
             }
 
             answer = citation;
@@ -155,6 +155,17 @@
   }
   function capitalizeFirstLetter(string) {
     return string[0].toUpperCase() + string.slice(1);
+  }
+
+  function fixCitation(citation) {
+    return toTitleCase(
+                strip(
+                    citation.toLowerCase().replaceAll("also ", "")
+                            .split(" ").slice(0, 2).join(),
+                    ","
+                ).replaceAll("prannaya", "prannay").replaceAll(".", "").trim()
+                .replaceAll("i-shiang", "bobby").replace("i-shang", "bobby").replace(",", " ").trim()
+            )
   }
 
   function toTitleCase(str) {
